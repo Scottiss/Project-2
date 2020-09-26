@@ -25,7 +25,7 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link" href="./add.html">Add A Recipe</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="./search.html">Search Recipes</a>
@@ -42,6 +42,29 @@
       </ul>
     </div>
   </nav>
+
+  <!-- Search saved recipes -->
+  <form class="form-inline my-2 my-lg-0">
+    <div class="btn-group">
+        <input class="form-control mr-sm-2" id="searchwhat" type="search" placeholder="Search"
+            aria-label="Search" />
+        <button class="btn btn-outline-secondary my-2 my-sm-0" type="searchRecipe" id="searchMe">
+            Search by
+        </button>
+        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only selection">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+            <li class="dropdown-item searchBtn" data-text="Search by User Name">Search by User Name
+            </li>
+            <li class="dropdown-item searchBtn" data-text="Search by Recipe Name">Search by Recipe Name
+            </li>
+        </div>
+    </div>
+  </form>
+
+  <script src=".js/style.js"></script>
 
 </body>
 </html>

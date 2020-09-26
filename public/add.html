@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's in your fridge?</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="jumbotron">
+    <h1 class="display-4"> What's in your fridge?</h1>
+  </header>
+
+  <!-- nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./index.html">Website Name</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="./add.html">Add A Recipe</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./search.html">Search Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./signup.html">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./members.html">Members</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+    <!-- Add a recipe -->
+    <div class="container addRecipeForm">
+        <form class="giveMeSpace">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputRecipeName">Recipe Name:</label>
+                    <input type="text" class="form-control" id="inputRecipeName" placeholder="recipe name" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputUserName">Created by:</label>
+                    <input type="text" class="form-control" id="inputUserName" placeholder="name" />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="inputAmount">Amount:</label>
+                    <input type="text" class="form-control" id="inputAmount" placeholder="1.5" />
+                    <select id="inputMeasurement" class="form-row">
+                        <option selected></option>
+                        <option>Teaspoon(s)</option>
+                        <option>Tablespoon(s)</option>
+                        <option>Cup(s)</option>
+                        <option>Ounce(s)</option>
+                        <option>Pint(s)</option>
+                        <option>Quart(s)</option>
+                        <option>Gallon(s)</option>
+                        <option>Pound(s)</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="inputIngredient">Ingredient:</label>
+                    <input type="text" class="form-control" id="inputIngredient" placeholder="Butter" />
+                </div>
+            </div>
+            <button type="submit" id="addIngredient" class="btn">Add Ingredient!</button>
+            <br>
+            <hr>
+            <div class="ingredientsInMe">
+                <h5>Ingredients:</h5>
+
+            </div>
+            <br>
+            <hr>
+
+            <div class="form-group">
+                <label for="inputInstructions">Instructions:</label>
+                <input type="text" class="form-control" id="inputInstructions" />
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="inputCook">Cook Time:</label>
+                    <input type="text" class="form-control" id="inputCook" />
+                </div>
+
+                <div class="form-group col-md-2">
+                    <label for="inputPrep">Prep Time:</label>
+                    <input type="text" class="form-control" id="inputPrep" />
+                </div>
+            </div>
+
+            <button type="submit" id="recipe-form" class="btn">
+                Save Recipe!
+            </button>
+        </form>
+    </div>
+
+    <div class="modal fade" id="showMeTheModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">You added a Recipe</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Add Another</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src=".js/style.js"></script>
+
+</body>
+</html>
